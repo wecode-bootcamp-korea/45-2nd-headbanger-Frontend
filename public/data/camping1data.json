@@ -1,0 +1,149 @@
+{
+  "name": "요기캠핑장",
+  "location": "서울특별시 마포구 상암동 495-81",
+  "averagegrades": 3.7,
+  "grades": {
+    "cozy": 4,
+    "safety": 3,
+    "price": 2,
+    "clean": 5,
+    "convenience": 4
+  },
+  "prices": {
+    "small": 10000,
+    "medium": 20000,
+    "large": 30000
+  },
+  "thumbnail": "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/ef5464ea-5eb8-426a-a097-a4ed7a395610.jpeg?im_w=960",
+  "pictures": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/b325b883-9c3d-4dc4-91c4-ae5b03aa76ff.jpeg?im_w=720",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/8db472a7-802b-46c7-b215-23513ee2e3fe.jpeg?im_w=720",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/1d456613-b0cc-40d5-9ba3-9e9f83069084.jpeg?im_w=720",
+    "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/f320537a-74ac-4e6a-b853-6fc48a72bc27.jpeg?im_w=720"
+  ],
+  "description": "주차 및 Wi-Fi가 항상 무료로 제공되므로 언제든지 차량을 입출차할 수 있으며 연락을 취하실 수 있습니다. 발리의 누사 렘봉안에 위치한 본 숙소는 관광 명소 및 흥미로운 레스토랑과 가깝습니다. 떠나기 전 유명한 Sacred Monkey Forest Sanctuary을/를 방문해 보세요. 별 4.5개를 받은 본 고급 숙소는 투숙객에게 숙소 내 레스토랑 및 마사지을/를 제공합니다.",
+  "environment": "city",
+  "map": "https://hangang.seoul.go.kr/resources/zeroCMS/site/main/images/facility_nanji_campingjang.jpg",
+  "review": [
+    {
+      "id": 1,
+      "user": "사용자1",
+      "grades": {
+        "cozy": 4,
+        "safety": 3,
+        "price": 2,
+        "clean": 5,
+        "convenience": 4
+      },
+      "comment": "캠핑장 분위기가 좋았습니다. 편안한 숙박이었습니다."
+    },
+    {
+      "id": 2,
+      "user": "사용자2",
+      "grades": {
+        "cozy": 3,
+        "safety": 4,
+        "price": 3,
+        "clean": 4,
+        "convenience": 3
+      },
+      "comment": "안전에 신경을 쓴 곳이라고 느껴졌습니다. 만족스러웠어요."
+    },
+    {
+      "id": 3,
+      "user": "사용자3",
+      "grades": {
+        "cozy": 2,
+        "safety": 3,
+        "price": 2,
+        "clean": 3,
+        "convenience": 2
+      },
+      "comment": "가격대비 만족스럽지는 않았습니다. 좀 더 싸게 제공되었으면 좋았을 것 같아요."
+    },
+    {
+      "id": 4,
+      "user": "사용자4",
+      "grades": {
+        "cozy": 5,
+        "safety": 4,
+        "price": 5,
+        "clean": 5,
+        "convenience": 5
+      },
+      "comment": "청결상태가 매우 좋았습니다. 관리가 잘 되어있어서 좋은 경험이었습니다."
+    },
+    {
+      "id": 5,
+      "user": "사용자5",
+      "grades": {
+        "cozy": 4,
+        "safety": 3,
+        "price": 4,
+        "clean": 4,
+        "convenience": 4
+      },
+      "comment": "편의시설이 잘 갖춰져 있어서 편하게 이용할 수 있었습니다."
+    },
+    {
+      "id": 6,
+      "user": "사용자6",
+      "grades": {
+        "cozy": 3,
+        "safety": 4,
+        "price": 3,
+        "clean": 4,
+        "convenience": 3
+      },
+      "comment": "분위기가 좋아서 즐거운 시간을 보냈습니다."
+    },
+    {
+      "id": 7,
+      "user": "사용자7",
+      "grades": {
+        "cozy": 5,
+        "safety": 5,
+        "price": 4,
+        "clean": 5,
+        "convenience": 5
+      },
+      "comment": "모든 면에서 만족스러웠습니다. 다음에도 또 방문하고 싶어요."
+    },
+    {
+      "id": 8,
+      "user": "사용자8",
+      "grades": {
+        "cozy": 4,
+        "safety": 4,
+        "price": 3,
+        "clean": 4,
+        "convenience": 4
+      },
+      "comment": "가성비가 괜찮았습니다. 조용하고 편안한 곳이었습니다."
+    },
+    {
+      "id": 9,
+      "user": "사용자9",
+      "grades": {
+        "cozy": 3,
+        "safety": 3,
+        "price": 3,
+        "clean": 3,
+        "convenience": 2
+      },
+      "comment": "조금 불편한 점도 있었지만, 전반적으로 괜찮았습니다."
+    },
+    {
+      "id": 10,
+      "user": "사용자10",
+      "grades": {
+        "cozy": 5,
+        "safety": 4,
+        "price": 4,
+        "clean": 5,
+        "convenience": 4
+      },
+      "comment": "청결하고 편안한 환경에서 즐거운 시간을 보냈습니다."
+    }
+  ]
+}

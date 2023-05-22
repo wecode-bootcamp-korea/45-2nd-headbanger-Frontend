@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "user": "사용자1",
+    "grades": {
+      "cozy": 4,
+      "safety": 3,
+      "price": 2,
+      "clean": 5,
+      "convenience": 4
+    },
+    "comment": "캠핑장 분위기가 좋았습니다. 편안한 숙박이었습니다."
+  },
+  {
+    "id": 2,
+    "user": "사용자2",
+    "grades": {
+      "cozy": 3,
+      "safety": 4,
+      "price": 3,
+      "clean": 4,
+      "convenience": 3
+    },
+    "comment": "안전에 신경을 쓴 곳이라고 느껴졌습니다. 만족스러웠어요."
+  },
+  {
+    "id": 3,
+    "user": "사용자3",
+    "grades": {
+      "cozy": 2,
+      "safety": 3,
+      "price": 2,
+      "clean": 3,
+      "convenience": 2
+    },
+    "comment": "가격대비 만족스럽지는 않았습니다. 좀 더 싸게 제공되었으면 좋았을 것 같아요."
+  },
+  {
+    "id": 4,
+    "user": "사용자4",
+    "grades": {
+      "cozy": 5,
+      "safety": 4,
+      "price": 5,
+      "clean": 5,
+      "convenience": 5
+    },
+    "comment": "청결상태가 매우 좋았습니다. 관리가 잘 되어있어서 좋은 경험이었습니다."
+  },
+  {
+    "id": 5,
+    "user": "사용자5",
+    "grades": {
+      "cozy": 4,
+      "safety": 3,
+      "price": 4,
+      "clean": 4,
+      "convenience": 4
+    },
+    "comment": "편의시설이 잘 갖춰져 있어서 편하게 이용할 수 있었습니다."
+  },
+  {
+    "id": 6,
+    "user": "사용자6",
+    "grades": {
+      "cozy": 3,
+      "safety": 4,
+      "price": 3,
+      "clean": 4,
+      "convenience": 3
+    },
+    "comment": "분위기가 좋아서 즐거운 시간을 보냈습니다."
+  },
+  {
+    "id": 7,
+    "user": "사용자7",
+    "grades": {
+      "cozy": 5,
+      "safety": 5,
+      "price": 4,
+      "clean": 5,
+      "convenience": 5
+    },
+    "comment": "모든 면에서 만족스러웠습니다. 다음에도 또 방문하고 싶어요."
+  },
+  {
+    "id": 8,
+    "user": "사용자8",
+    "grades": {
+      "cozy": 4,
+      "safety": 4,
+      "price": 3,
+      "clean": 4,
+      "convenience": 4
+    },
+    "comment": "가성비가 괜찮았습니다. 조용하고 편안한 곳이었습니다."
+  },
+  {
+    "id": 9,
+    "user": "사용자9",
+    "grades": {
+      "cozy": 3,
+      "safety": 3,
+      "price": 3,
+      "clean": 3,
+      "convenience": 2
+    },
+    "comment": "조금 불편한 점도 있었지만, 전반적으로 괜찮았습니다."
+  },
+  {
+    "id": 10,
+    "user": "사용자10",
+    "grades": {
+      "cozy": 5,
+      "safety": 4,
+      "price": 4,
+      "clean": 5,
+      "convenience": 4
+    },
+    "comment": "청결하고 편안한 환경에서 즐거운 시간을 보냈습니다."
+  }
+]
