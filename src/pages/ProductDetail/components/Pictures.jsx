@@ -29,7 +29,7 @@ const ImageContainer = styled.div`
 `;
 
 const MainImage = styled.img`
-  ${boxSize(560, 390)};
+  ${boxSize(560, 400)};
   transition: filter 0.3s ease;
   &:hover {
     filter: brightness(80%);

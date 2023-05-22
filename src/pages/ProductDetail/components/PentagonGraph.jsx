@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { flexSort, fontMix } from '../../../styles/mixin';
@@ -6,6 +6,10 @@ import theme from '../../../styles/theme';
 
 const PentagonGraph = () => {
   const productData = useSelector(state => state.productData);
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    opacity: 0.6,
+  });
 
   if (!productData) {
     return <div>로딩 중...</div>;
@@ -19,7 +23,7 @@ const PentagonGraph = () => {
   const graphSize = 90;
   const svgSize = 150;
   const labelOffset = 20;
-  const textDistance = 20; // text distance factor from the center of the graph
+  const textDistance = 20;
   const centerX = svgSize / 2;
   const centerY = svgSize / 2;
   const angleStep = (Math.PI * 2) / data.length;
@@ -61,11 +65,71 @@ const PentagonGraph = () => {
           fill="#eee"
           stroke="#000"
         />
+
+        {[1, 2, 3, 4].map(score => {
+          const scorePoints = data.map((d, i) => {
+            const radius = (score / maxRating) * (graphSize / 2);
+            const x = Math.cos(angles[i]) * radius + centerX;
+            const y = Math.sin(angles[i]) * radius + centerY;
+            return { x, y };
+          });
+
+          return (
+            <polygon
+              points={scorePoints.map(p => `${p.x},${p.y}`).join(' ')}
+              fill="transparent"
+              stroke="#B0B0B0"
+              strokeDasharray="10 0"
+              key={score}
+            />
+          );
+        })}
+
         <polygon
           points={points.map(p => `${p.x},${p.y}`).join(' ')}
           fill="#f9dd4a"
-          stroke="#000"
+          stroke="orange"
+          opacity={tooltip.opacity}
+          onMouseEnter={() =>
+            setTooltip({
+              visible: true,
+              opacity: 1,
+            })
+          }
+          onMouseLeave={() => setTooltip({ visible: false, opacity: 0.8 })}
         />
+        {points.map((p, i) => (
+          <circle cx={p.x} cy={p.y} r={2} fill="red" key={i} />
+        ))}
+        {maxPoints.map((p, i) => (
+          <line
+            x1={centerX}
+            y1={centerY}
+            x2={p.x}
+            y2={p.y}
+            stroke="#B0B0B0"
+            key={i}
+          />
+        ))}
+
+        {tooltip.visible &&
+          points.map((p, i) => (
+            <text
+              x={p.x}
+              y={p.y - 10}
+              textAnchor="middle"
+              fill="black"
+              key={i}
+              style={{
+                fontSize: '10px',
+                backgroundColor: 'white',
+                padding: '5px',
+              }}
+            >
+              {data[i]}
+            </text>
+          ))}
+
         {labelPoints.map((p, i) => {
           let dyValue;
           switch (i) {

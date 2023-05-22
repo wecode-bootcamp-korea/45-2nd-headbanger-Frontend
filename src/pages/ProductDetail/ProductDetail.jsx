@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled, { css } from 'styled-components';
-import theme from '../../styles/theme';
-import { fontMix, flexSort } from '../../styles/mixin';
+import styled from 'styled-components';
+import { flexSort } from '../../styles/mixin';
 import { setProductData } from '../../actions';
 import useFetchData from '../../components/customhooks/useFetchData';
 import TitleLine from './components/TitleLine';
@@ -18,9 +17,6 @@ const ProductDetail = () => {
   if (!productData) {
     return <div>Loading...</div>;
   }
-
-  const { name } = productData;
-
   return (
     <Container>
       <FlexCenter>
