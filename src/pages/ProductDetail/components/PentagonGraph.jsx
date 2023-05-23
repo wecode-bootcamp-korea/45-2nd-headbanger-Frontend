@@ -176,7 +176,6 @@ export default PentagonGraph;
 
 const Container = styled.div`
   ${fontMix(10, theme.mainBlack)}
-  margin-top: 40px;
 `;
 
 const Graph = styled.svg`

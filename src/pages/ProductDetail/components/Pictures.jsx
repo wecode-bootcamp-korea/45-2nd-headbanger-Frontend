@@ -24,12 +24,12 @@ export default Pictures;
 const ImageContainer = styled.div`
   margin-top: 80px;
   display: grid;
-  grid-template-columns: 560px 1fr;
+  grid-template-columns: 535px 1fr;
   grid-gap: 10px;
 `;
 
 const MainImage = styled.img`
-  ${boxSize(560, 400)};
+  ${boxSize(530, 400)};
   transition: filter 0.3s ease;
   &:hover {
     filter: brightness(80%);

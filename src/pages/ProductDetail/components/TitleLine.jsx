@@ -51,7 +51,7 @@ const Container = styled.div`
   ${flexSort('space-between', 'flex-end')};
   margin-top: 40px;
   margin-right: 40px;
-  width: 900px;
+  width: 880px;
 `;
 
 const NameContainer = styled.div`

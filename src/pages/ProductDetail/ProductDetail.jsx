@@ -1,13 +1,16 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
-import { flexSort } from '../../styles/mixin';
+
 import { setProductData } from '../../actions';
 import useFetchData from '../../components/customhooks/useFetchData';
 import TitleLine from './components/TitleLine';
 import PentagonGraph from './components/PentagonGraph';
 import Pictures from './components/Pictures';
 import ViewMap from './components/ViewMap';
+import styled from 'styled-components';
+import theme from '../../styles/theme';
+import { flexSort } from '../../styles/mixin';
+import ProductNav from './components/ProductNav';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -20,13 +23,14 @@ const ProductDetail = () => {
   }
   return (
     <Container>
+      <Pictures />
+      <ProductNav />
       <FlexCenter>
         <FlexStart>
           <PentagonGraph />
           <TitleLine />
         </FlexStart>
       </FlexCenter>
-      <Pictures />
       <ViewMap />
     </Container>
   );
@@ -35,8 +39,7 @@ const ProductDetail = () => {
 export default ProductDetail;
 
 const Container = styled.div`
-  margin-top: 40px;
-
+  margin-top: 20px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -46,8 +49,12 @@ const Container = styled.div`
 
 const FlexCenter = styled.div`
   ${flexSort('space-between', 'center')};
-  height: 100px;
+  height: 150px;
   width: 1100px;
+  margin-top: 20px;
+  padding: 10px;
+
+  border: 1px solid ${theme.borderGrey};
 `;
 const FlexStart = styled.div`
   ${flexSort('center', 'center')}
