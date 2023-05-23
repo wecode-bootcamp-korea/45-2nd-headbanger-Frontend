@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { setProductData } from '../../actions';
 import useFetchData from '../../components/customhooks/useFetchData';
 import TitleLine from './components/TitleLine';
@@ -11,6 +10,7 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { flexSort } from '../../styles/mixin';
 import ProductNav from './components/ProductNav';
+import Description from './components/Description';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -21,6 +21,7 @@ const ProductDetail = () => {
   if (!productData) {
     return <div>Loading...</div>;
   }
+
   return (
     <Container>
       <Pictures />
@@ -32,6 +33,7 @@ const ProductDetail = () => {
         </FlexStart>
       </FlexCenter>
       <ViewMap />
+      <Description />
     </Container>
   );
 };
@@ -56,6 +58,7 @@ const FlexCenter = styled.div`
 
   border: 1px solid ${theme.borderGrey};
 `;
+
 const FlexStart = styled.div`
   ${flexSort('center', 'center')}
   gap:30px;
