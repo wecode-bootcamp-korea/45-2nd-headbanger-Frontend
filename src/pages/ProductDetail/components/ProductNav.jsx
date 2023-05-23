@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import theme from '../../../styles/theme';
+import { flexSort, fontMix } from '../../../styles/mixin';
+
 const ProductNav = () => {
   const productData = useSelector(state => state.productData);
 
@@ -34,6 +36,7 @@ const Container = styled.div`
   justify-content: flex-start;
   border: 1px solid ${theme.borderGrey};
   margin-top: 20px;
+  padding: 0 20px;
 `;
 
 const SectionButton = styled.button`
@@ -59,12 +62,12 @@ const RightSection = styled.div`
 `;
 
 const StartingPrice = styled.span`
-  font-size: 14px;
+  ${fontMix(8, theme.mainBlack)}
   margin-right: 8px;
 `;
 
 const Price = styled.span`
-  font-size: 14px;
+  font-size: 16px;
   color: red;
 `;
 

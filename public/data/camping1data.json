@@ -23,7 +23,7 @@
   ],
   "description": "주차 및 Wi-Fi가 항상 무료로 제공되므로 언제든지 차량을 입출차할 수 있으며 연락을 취하실 수 있습니다. 발리의 누사 렘봉안에 위치한 본 숙소는 관광 명소 및 흥미로운 레스토랑과 가깝습니다. 떠나기 전 유명한 Sacred Monkey Forest Sanctuary을/를 방문해 보세요. 별 4.5개를 받은 본 고급 숙소는 투숙객에게 숙소 내 레스토랑 및 마사지을/를 제공합니다.",
   "environment": "city",
-  "map": "https://hangang.seoul.go.kr/resources/zeroCMS/site/main/images/facility_nanji_campingjang.jpg",
+  "map": "https://github.com/Geun9/CVG-project/blob/main/image/campmap.png?raw=true",
   "services": {
     "kidszone": true,
     "shower": true,
