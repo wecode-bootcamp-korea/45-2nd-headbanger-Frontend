@@ -7,6 +7,7 @@ import useFetchData from '../../components/customhooks/useFetchData';
 import TitleLine from './components/TitleLine';
 import PentagonGraph from './components/PentagonGraph';
 import Pictures from './components/Pictures';
+import ViewMap from './components/ViewMap';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const ProductDetail = () => {
         </FlexStart>
       </FlexCenter>
       <Pictures />
+      <ViewMap />
     </Container>
   );
 };
@@ -35,7 +37,7 @@ export default ProductDetail;
 const Container = styled.div`
   margin-top: 40px;
 
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

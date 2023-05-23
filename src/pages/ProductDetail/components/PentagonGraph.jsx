@@ -43,7 +43,7 @@ const PentagonGraph = () => {
     return { x, y };
   });
 
-  const labels = ['안락함', '안전함', '가성비', '청결도', '편리함'];
+  const labels = ['경관', '안전함', '가성비', '청결도', '편리함'];
 
   const labelPoints = maxPoints.map((p, i) => {
     const x =
@@ -65,6 +65,17 @@ const PentagonGraph = () => {
           fill="#eee"
           stroke="#000"
         />
+
+        {maxPoints.map((p, i) => (
+          <line
+            x1={centerX}
+            y1={centerY}
+            x2={p.x}
+            y2={p.y}
+            stroke="#B0B0B0"
+            key={i}
+          />
+        ))}
 
         {[1, 2, 3, 4].map(score => {
           const scorePoints = data.map((d, i) => {
@@ -93,30 +104,21 @@ const PentagonGraph = () => {
           onMouseEnter={() =>
             setTooltip({
               visible: true,
-              opacity: 1,
+              opacity: 0.9,
             })
           }
-          onMouseLeave={() => setTooltip({ visible: false, opacity: 0.8 })}
+          onMouseLeave={() => setTooltip({ visible: false, opacity: 0.6 })}
         />
+
         {points.map((p, i) => (
           <circle cx={p.x} cy={p.y} r={2} fill="red" key={i} />
-        ))}
-        {maxPoints.map((p, i) => (
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={p.x}
-            y2={p.y}
-            stroke="#B0B0B0"
-            key={i}
-          />
         ))}
 
         {tooltip.visible &&
           points.map((p, i) => (
             <text
               x={p.x}
-              y={p.y - 10}
+              y={i === 0 ? p.y + 15 : p.y - 10} // 경관 포인트만 아래로 내리고 나머지는 그대로 유지
               textAnchor="middle"
               fill="black"
               key={i}
@@ -125,6 +127,13 @@ const PentagonGraph = () => {
                 backgroundColor: 'white',
                 padding: '5px',
               }}
+              onMouseEnter={() =>
+                setTooltip({
+                  visible: true,
+                  opacity: 0.9,
+                })
+              }
+              onMouseLeave={() => setTooltip({ visible: false, opacity: 0.6 })}
             >
               {data[i]}
             </text>

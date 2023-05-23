@@ -24,7 +24,7 @@ const TitleLine = () => {
         </NameContainer>
 
         <SubTitle>
-          <Rating>{averagegrades}점 / 5.0</Rating>
+          <Rating>{averagegrades} / 5.0 점</Rating>
           <Divider>|</Divider>
           <ReviewCount>{reviewCount}개의 후기</ReviewCount>
           <Divider>|</Divider>
