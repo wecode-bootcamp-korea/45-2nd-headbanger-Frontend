@@ -22,7 +22,6 @@ const Pictures = () => {
 export default Pictures;
 
 const ImageContainer = styled.div`
-  margin-top: 80px;
   display: grid;
   grid-template-columns: 535px 1fr;
   grid-gap: 10px;

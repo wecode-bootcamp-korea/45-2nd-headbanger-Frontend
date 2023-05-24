@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import theme from '../../../styles/theme';
 import { flexSort, fontMix } from '../../../styles/mixin';
 
-const ProductNav = () => {
+const ProductNav = ({ overviewRef, featuresRef, facilitiesRef }) => {
   const productData = useSelector(state => state.productData);
 
   if (!productData) {
@@ -15,8 +15,27 @@ const ProductNav = () => {
 
   return (
     <Container>
-      <SectionButton>개요</SectionButton>
-      <SectionButton>특징</SectionButton>
+      <SectionButton
+        onClick={() =>
+          overviewRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+          })
+        }
+      >
+        개요
+      </SectionButton>
+      <SectionButton
+        onClick={() =>
+          featuresRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+          })
+        }
+      >
+        특징
+      </SectionButton>
+      <SectionButton>편의시설</SectionButton>
       <SectionButton>조감도</SectionButton>
       <SectionButton>이용후기</SectionButton>
       <SectionButton>주변지도</SectionButton>
@@ -35,7 +54,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   border: 1px solid ${theme.borderGrey};
-  margin-top: 20px;
   padding: 0 20px;
 `;
 

@@ -1,12 +1,13 @@
 {
   "name": "요기캠핑장",
   "location": "서울특별시 마포구 상암동 495-81",
-  "averagegrades": 3.7,
+  "location_category": "seoul",
+  "average_grades": 2.3,
   "grades": {
-    "view": 1,
-    "safety": 3,
-    "price": 2,
-    "clean": 5,
+    "view": 5,
+    "safety": 5,
+    "price": 3,
+    "clean": 1,
     "convenience": 4
   },
   "prices": {
@@ -21,17 +22,19 @@
     "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/1d456613-b0cc-40d5-9ba3-9e9f83069084.jpeg?im_w=720",
     "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/f320537a-74ac-4e6a-b853-6fc48a72bc27.jpeg?im_w=720"
   ],
-  "description": "주차 및 Wi-Fi가 항상 무료로 제공되므로 언제든지 차량을 입출차할 수 있으며 연락을 취하실 수 있습니다. 발리의 누사 렘봉안에 위치한 본 숙소는 관광 명소 및 흥미로운 레스토랑과 가깝습니다. 떠나기 전 유명한 Sacred Monkey Forest Sanctuary을/를 방문해 보세요. 별 4.5개를 받은 본 고급 숙소는 투숙객에게 숙소 내 레스토랑 및 마사지을/를 제공합니다.",
+  "description": "요기 캠핑장은 서울특별시 마포구 상암동에 위치한 글램핑 장소입니다.\n 이 캠핑장은 서울근교에 위치하여 교통이 편리한 장점이 있습니다.\n요기 캠핑장은 경관이 매력적이며, 안전함을 느낄 수 있는 곳으로 평가받고 있습니다.\n또한, 가성비가 눈에 띄며 청결함에 신경을 쓰는 캠핑장입니다.\n다양한 시설이 있어 편안하게 머물 수 있는 환경을 제공합니다.\n이 캠핑장은 도심 속에서 즐길 수 있는 글램핑 경험을 제공합니다.\n도심 속에서 휴식과 자연을 동시에 느낄 수 있습니다.\n가족들과 함께 이용할 수 있는 키즈존과 샤워 시설, 수영장 등 다양한 서비스를 제공하고 있습니다.\n애완동물과 함께 이용할 수 있는 편의를 제공하고 있습니다.\n요기 캠핑장은 편안하고 조용한 환경에서 가격 대비 만족스러운 경험을 제공하고 있습니다.\n조금 불편한 점도 있을 수 있으나, 전반적으로 괜찮은 캠핑장으로 평가되고 있습니다.\n요기 캠핑장은 청결하고 편안한 환경에서 다양한 시설과 서비스를 제공하여 즐거운 캠핑 경험을 선사합니다.\n다음에도 방문하고 싶은 캠핑장으로 추천할 만한 곳입니다.",
   "environment": "city",
   "map": "https://github.com/Geun9/CVG-project/blob/main/image/campmap.png?raw=true",
+  "checkin": "12:00",
+  "checkout": "10:00",
   "services": {
     "kidszone": true,
     "shower": true,
-    "swimpool": true,
+    "swimpool": false,
     "campfire": false,
     "withpets": true
   },
-  "review": [
+  "reviews": [
     {
       "id": 1,
       "user": "사용자1",

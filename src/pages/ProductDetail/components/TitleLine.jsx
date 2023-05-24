@@ -13,8 +13,8 @@ const TitleLine = () => {
     return <div>Loading...</div>;
   }
 
-  const { name, location, averagegrades, review } = productData;
-  const reviewCount = review.length;
+  const { name, location, reviews, average_grades } = productData;
+  const reviewCount = reviews.length;
 
   return (
     <Container>
@@ -24,7 +24,7 @@ const TitleLine = () => {
         </NameContainer>
 
         <SubTitle>
-          <Rating>{averagegrades} / 5.0 점</Rating>
+          <Rating>{average_grades} / 5.0 점</Rating>
           <Divider>|</Divider>
           <ReviewCount>{reviewCount}개의 후기</ReviewCount>
           <Divider>|</Divider>
@@ -49,8 +49,6 @@ export default TitleLine;
 
 const Container = styled.div`
   ${flexSort('space-between', 'flex-end')};
-  margin-top: 40px;
-  margin-right: 40px;
   width: 880px;
 `;
 

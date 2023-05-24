@@ -143,26 +143,32 @@ const PentagonGraph = () => {
           let dyValue;
           switch (i) {
             case 0:
-              dyValue = '-1em'; // 안락함
+              dyValue = -10; // 안락함
               break;
             case 1:
-              dyValue = '1em'; // 안전함
+              dyValue = 10; // 안전함
               break;
             case 2:
-              dyValue = '1.5em'; // 가성비
+              dyValue = 15; // 가성비
               break;
             case 3:
-              dyValue = '1.5em'; // 청결도
+              dyValue = 15; // 청결도
               break;
             case 4:
-              dyValue = '1em'; // 편리함
+              dyValue = 10; // 편리함
               break;
             default:
-              dyValue = '1em';
+              dyValue = 10;
           }
 
           return (
-            <text x={p.x} y={p.y} textAnchor="middle" dy={dyValue} key={i}>
+            <text
+              x={p.x}
+              y={p.y}
+              textAnchor="middle"
+              dy={`${dyValue}px`}
+              key={i}
+            >
               {labels[i]}
             </text>
           );
