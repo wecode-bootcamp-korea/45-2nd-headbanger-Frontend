@@ -19,7 +19,7 @@ const ProductNav = ({ overviewRef, featuresRef, facilitiesRef }) => {
         onClick={() =>
           overviewRef.current.scrollIntoView({
             behavior: 'smooth',
-            block: 'end',
+            block: 'center',
           })
         }
       >
@@ -29,7 +29,7 @@ const ProductNav = ({ overviewRef, featuresRef, facilitiesRef }) => {
         onClick={() =>
           featuresRef.current.scrollIntoView({
             behavior: 'smooth',
-            block: 'end',
+            block: 'center',
           })
         }
       >

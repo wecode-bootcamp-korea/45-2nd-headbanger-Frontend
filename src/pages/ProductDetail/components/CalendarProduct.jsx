@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import styled from 'styled-components';
 import { setDates } from '../../../actions';
-
-import 'react-datepicker/dist/react-datepicker.css';
+import { Title } from './TxtDescription';
+import { ko } from 'date-fns/locale';
+import './calendarProduct.css';
+import { flexSort } from '../../../styles/mixin';
 
 const Calendar = () => {
   const productData = useSelector(state => state.productData);
@@ -13,16 +15,6 @@ const Calendar = () => {
   const [startDate, setStartDate] = useState(startDay);
   const [endDate, setEndDate] = useState(endDay);
 
-  // const handleStartDateChange = date => {
-  //   setStartDate(date);
-  //   dispatch(setDates(date, endDate));
-  // };
-
-  // const handleEndDateChange = date => {
-  //   setEndDate(date);
-  //   dispatch(setDates(startDate, date));
-  // };
-
   const onChange = dates => {
     const [start, end] = dates;
     setStartDate(start);
@@ -30,43 +22,31 @@ const Calendar = () => {
     dispatch(setDates(start, end));
   };
 
-  // const [startDateOpen, setStartDateOpen] = useState(true);
-  // const [endDateOpen, setEndDateOpen] = useState(true);
   return (
     <CalendarWrapper>
-      <CalendarTitle>
-        {productData.name} -{' '}
+      <Title>{productData.name}</Title>
+      <DateRange>
+        <div>
+          {startDate &&
+            startDate.toLocaleDateString('ko-KR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}{' '}
+          ~{' '}
+          {endDate &&
+            endDate.toLocaleDateString('ko-KR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+        </div>
         {endDate &&
           startDate &&
           `${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}박
           ${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1}일`}
-      </CalendarTitle>
-      <DateRange>
-        {startDate &&
-          startDate.toLocaleDateString('ko-KR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}{' '}
-        ~{' '}
-        {endDate &&
-          endDate.toLocaleDateString('ko-KR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
       </DateRange>
       <DatePickerWrapper>
-        {/* <DatePicker
-          selected={startDate}
-          onChange={handleStartDateChange}
-          minDate={new Date()}
-        />
-        <DatePicker
-          selected={endDate}
-          onChange={handleEndDateChange}
-          minDate={new Date(startDate.getTime() + 24 * 60 * 60 * 1000)}
-        /> */}
         <DatePicker
           selected={startDate}
           onChange={onChange}
@@ -76,6 +56,7 @@ const Calendar = () => {
           monthsShown={2}
           selectsRange
           inline
+          locale={ko}
         />
       </DatePickerWrapper>
     </CalendarWrapper>
@@ -88,15 +69,23 @@ const CalendarWrapper = styled.div`
   width: 600px;
 `;
 
-const CalendarTitle = styled.h1`
-  // Your styles here
-`;
-
 const DateRange = styled.h2`
-  // Your styles here
+  ${flexSort('flex-start', 'center')}
+  gap:40px;
+  margin-top: 40px;
 `;
 
 const DatePickerWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
+  margin-top: 40px;
+  width: 600px;
+  .react-datepicker {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+  }
+
+  .react-datepicker__month-container {
+    width: 280px;
+  }
 `;
