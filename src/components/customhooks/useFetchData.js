@@ -1,4 +1,4 @@
-// useFetchData.js
+// useFetchData.js 를 이용해 자료받은다음 리덕스로 올리는과정
 
 import { useEffect } from 'react';
 

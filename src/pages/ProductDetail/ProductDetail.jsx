@@ -33,7 +33,11 @@ const ProductDetail = () => {
     <Container>
       <Pictures />{' '}
       <ProductNavWrapper>
-        <ProductNav overviewRef={overviewRef} featuresRef={featuresRef} />
+        <ProductNav
+          overviewRef={overviewRef}
+          featuresRef={featuresRef}
+          facilitiesRef={facilitiesRef}
+        />
       </ProductNavWrapper>
       <div ref={overviewRef}>
         <FlexCenter>
@@ -50,7 +54,9 @@ const ProductDetail = () => {
           <div ref={featuresRef}>
             <TxtDescription />
           </div>
-          <Facilities />
+          <div ref={facilitiesRef}>
+            <Facilities />
+          </div>
           <CalendarProduct />
         </LeftSection>
         <RightSection>

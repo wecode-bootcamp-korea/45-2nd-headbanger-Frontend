@@ -35,7 +35,16 @@ const ProductNav = ({ overviewRef, featuresRef, facilitiesRef }) => {
       >
         특징
       </SectionButton>
-      <SectionButton>편의시설</SectionButton>
+      <SectionButton
+        onClick={() =>
+          facilitiesRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+          })
+        }
+      >
+        편의시설
+      </SectionButton>
       <SectionButton>조감도</SectionButton>
       <SectionButton>이용후기</SectionButton>
       <SectionButton>주변지도</SectionButton>

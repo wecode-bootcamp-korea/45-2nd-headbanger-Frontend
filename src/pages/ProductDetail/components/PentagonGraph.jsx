@@ -22,7 +22,6 @@ const PentagonGraph = () => {
 
   const graphSize = 90;
   const svgSize = 150;
-  const labelOffset = 20;
   const textDistance = 20;
   const centerX = svgSize / 2;
   const centerY = svgSize / 2;
@@ -143,7 +142,7 @@ const PentagonGraph = () => {
           let dyValue;
           switch (i) {
             case 0:
-              dyValue = -10; // 안락함
+              dyValue = -10; // 경관
               break;
             case 1:
               dyValue = 10; // 안전함

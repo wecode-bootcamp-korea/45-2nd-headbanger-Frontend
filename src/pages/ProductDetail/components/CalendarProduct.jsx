@@ -26,7 +26,7 @@ const Calendar = () => {
     <CalendarWrapper>
       <Title>{productData.name}</Title>
       <DateRange>
-        <div>
+        <h2 classname="range">
           {startDate &&
             startDate.toLocaleDateString('ko-KR', {
               year: 'numeric',
@@ -40,11 +40,13 @@ const Calendar = () => {
               month: 'long',
               day: 'numeric',
             })}
-        </div>
-        {endDate &&
-          startDate &&
-          `${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}박
+        </h2>
+        <h2 className="night">
+          {endDate &&
+            startDate &&
+            `${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24))}박
           ${Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24)) + 1}일`}
+        </h2>
       </DateRange>
       <DatePickerWrapper>
         <DatePicker
@@ -70,9 +72,18 @@ const CalendarWrapper = styled.div`
 `;
 
 const DateRange = styled.h2`
-  ${flexSort('flex-start', 'center')}
-  gap:40px;
+  /* ${flexSort('flex-start', 'center')} */
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  gap: 16px;
   margin-top: 40px;
+  .range {
+    font-size: 20px;
+  }
+  .night {
+    font-size: 16px;
+  }
 `;
 
 const DatePickerWrapper = styled.div`

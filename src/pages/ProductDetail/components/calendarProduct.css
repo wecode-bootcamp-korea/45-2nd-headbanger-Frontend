@@ -453,6 +453,7 @@
 }
 
 .react-datepicker__day-names {
+  margin-top: 10px;
   margin-bottom: -8px;
 }
 
