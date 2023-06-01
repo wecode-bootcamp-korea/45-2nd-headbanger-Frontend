@@ -67,7 +67,9 @@ const ImagesContainer = ({ id, searchParams, campId }) => {
             <TextContainer>
               <CampName>{content.campsite_name}</CampName>
               <CampRegion>{content.region_name}</CampRegion>
-              <CampPrice>{Math.floor(Number(content.price))} 원</CampPrice>
+              <CampPrice>
+                {Math.floor(Number(content.price)).toLocaleString()} 원
+              </CampPrice>
             </TextContainer>
           </FirstImage>
         ))}
