@@ -29,6 +29,7 @@ const BookingLogcopy = () => {
         {logList &&
           logList.map(
             ({
+              id,
               campingZoneNames,
               campsiteName,
               endDate,
@@ -39,7 +40,7 @@ const BookingLogcopy = () => {
               reservationNumber,
             }) => {
               return (
-                <BookingView key={1}>
+                <BookingView key={id}>
                   <ImgBox>
                     <BookingImg src={thumbnail} alt="캠핑장 사진" />
                   </ImgBox>
