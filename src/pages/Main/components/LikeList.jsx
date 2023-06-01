@@ -20,14 +20,14 @@ const LikeList = () => {
       });
   }, []);
 
-  const productlistClick = campsite_name => {
-    navigate(`/productDetail?=${campsite_name}`);
+  const productlistClick = campId => {
+    navigate(`/productDetail/${campId}`);
   };
 
   const settings = {
     dots: false,
     arrows: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -41,10 +41,7 @@ const LikeList = () => {
         <Local> 제주도 인기 캠핑장</Local>
         <StyledSlider {...settings}>
           {product.map(({ id, thumbnail, campsite_name, price }) => (
-            <SliderItem
-              key={id}
-              onClick={() => productlistClick(campsite_name)}
-            >
+            <SliderItem key={id} onClick={() => productlistClick(id)}>
               <ImageContainer>
                 <ImageOverlay />
                 <ItemImage src={thumbnail} alt="제주도 캠핑장" />
