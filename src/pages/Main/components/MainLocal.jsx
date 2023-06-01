@@ -22,7 +22,7 @@ const MainLocal = ({ regionCampingData }) => {
 
   const handleTourButtonClick = regionid => {
     navigate(`/productslist?regionId=${regionid}`);
-    window.scrollTo(0.0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
