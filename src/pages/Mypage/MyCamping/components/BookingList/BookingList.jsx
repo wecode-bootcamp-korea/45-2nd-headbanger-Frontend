@@ -22,6 +22,7 @@ const BookingList = () => {
         {bookingList &&
           bookingList.map(
             ({
+              id,
               campingZoneNames,
               campsiteName,
               endDate,
@@ -32,7 +33,7 @@ const BookingList = () => {
               reservationNumber,
             }) => {
               return (
-                <BookingView key={1}>
+                <BookingView key={id}>
                   <ImgBox>
                     <BookingImg src={thumbnail} alt="캠핑장 사진" />
                   </ImgBox>
