@@ -40,9 +40,10 @@ const ThemaCamping = ({ themaCampingData }) => {
                 <ThemaWrap>
                   <ThemaItem
                     onMouseEnter={() => setCurrentId(thema[0].id)}
-                    onClick={() =>
-                      navigate(`/productslist?themeId=${thema[0].id}`)
-                    }
+                    onClick={() => {
+                      navigate(`/productslist?themeId=${thema[0].id}`);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   >
                     도심 체험 캠핑
                     <Place>#도심 #도시 #글램핑</Place>
@@ -55,9 +56,10 @@ const ThemaCamping = ({ themaCampingData }) => {
                 <ThemaWrap>
                   <ThemaItem
                     onMouseEnter={() => setCurrentId(thema[1].id)}
-                    onClick={() =>
-                      navigate(`/productslist?themeId=${thema[1].id}`)
-                    }
+                    onClick={() => {
+                      navigate(`/productslist?themeId=${thema[1].id}`);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   >
                     자연 모험 캠핑
                     <Place>#산 #등산 #트레킹</Place>
@@ -70,9 +72,10 @@ const ThemaCamping = ({ themaCampingData }) => {
                 <ThemaWrap>
                   <ThemaItem
                     onMouseEnter={() => setCurrentId(thema[2].id)}
-                    onClick={() =>
-                      navigate(`/productslist?themeId=${thema[2].id}`)
-                    }
+                    onClick={() => {
+                      navigate(`/productslist?themeId=${thema[2].id}`);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   >
                     해변 휴식 캠핑
                     <Place>#바다 #해변 #해변휴양</Place>
@@ -85,9 +88,10 @@ const ThemaCamping = ({ themaCampingData }) => {
                 <ThemaWrap>
                   <ThemaItem
                     onMouseEnter={() => setCurrentId(thema[3].id)}
-                    onClick={() =>
-                      navigate(`/productslist?themeId=${thema[3].id}`)
-                    }
+                    onClick={() => {
+                      navigate(`/productslist?themeId=${thema[3].id}`);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   >
                     맑은 자연 캠핑
                     <Place> #호수 #자연 #호수라이프</Place>
