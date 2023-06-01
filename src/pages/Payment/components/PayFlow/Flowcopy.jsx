@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { flexSort } from '../../../../styles/mixin';
+import { secondsInDay } from 'date-fns';
 
 const PayFlow = () => {
   const [nextRedirectPcUrl, setNextRedirectPcUrl] = useState('');
@@ -116,9 +117,7 @@ const PayFlow = () => {
             <TotalPrice>{payPrice}원</TotalPrice>
           </PriceInfo>
         </ViewSection>
-        <PayBtn href={nextRedirectPcUrl}>
-          <ButtonText>결제하기</ButtonText>
-        </PayBtn>
+        <PayBtn href={nextRedirectPcUrl}>결제하기</PayBtn>
       </ViewBox>
     </Container>
   );
@@ -127,10 +126,10 @@ const PayFlow = () => {
 export default PayFlow;
 
 const Container = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: sticky;
-  top: 60px;
+  top: 80px;
 `;
 
 const ViewBox = styled.div`
@@ -280,8 +279,7 @@ const TotalPrice = styled.p`
   font-weight: 600;
 `;
 
-const PayBtn = styled.a`
-  ${flexSort('center', 'center')}
+const PayBtn = styled.button`
   width: 100%;
   height: 48px;
   border: 0;
@@ -292,5 +290,3 @@ const PayBtn = styled.a`
     cursor: pointer;
   }
 `;
-
-const ButtonText = styled.p``;
